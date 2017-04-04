@@ -1,0 +1,45 @@
+header {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+header h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: #202020;
+    padding-bottom: 10px;
+}
+header .cart {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -5px;
+    right: 20px;
+}
+
+header .cart img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+header a {
+    text-decoration: none;
+}
+header a:visited {
+    color: #202020;
+}
+header span {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    background: #202020;
+    color: #fafafa;
+    border-radius: 50%;
+}

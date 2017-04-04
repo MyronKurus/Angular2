@@ -1,0 +1,15 @@
+<div class="container shopping-cart">
+    <!--<div class="row epmty" *ngif="!orderList.length">-->
+        <!--<h1>Your shopping cart is empty</h1>-->
+    <!--</div>-->
+    <div class="row" *ngFor="let order of orderList">
+        <div class="col-md-1"><img src="{{order.image}}" alt="#"></div>
+        <div class="col-md-5 text">{{order.name}}</div>
+        <div class="col-md-2 text">Qty: {{order.quantity}}</div>
+        <div class="col-md-2 text">Size: {{order.size.toUpperCase()}}</div>
+        <div class="col-md-2 text">${{order.price.toFixed(2)}}</div>
+    </div>
+    <div class="row" *ngIf="sum">
+        <h5 class="total">Total price: ${{sum.toFixed(2)}}</h5>
+    </div>
+</div>

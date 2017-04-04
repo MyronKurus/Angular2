@@ -1,0 +1,28 @@
+<div class="container wear-item-page">
+    <div class="row" *ngIf="item">
+        <div class="col-md-6 col-sm-6 wear-picture">
+            <img src="{{item.largeImage}}" alt="#">
+        </div>
+        <div class="col-md-6 col-sm-6 wear-info">
+            <h3>{{item.title}}</h3>
+            <h4>${{item.price.toFixed(2)}}</h4>
+            <div class="select-block">
+                <form>
+                    <label for="wear-quantity">Size:</label>
+                    <select name="quantity" id="size" #s>
+                        <option *ngFor="let size of sizes" [value]="size">{{size}}</option>
+                    </select>
+                </form>
+                <form>
+                    <label for="wear-quantity">Quantity:</label>
+                    <select name="quantity" id="wear-quantity" #q>
+                        <option *ngFor="let quantity of quantities" [value]="quantity">{{quantity}}</option>
+                    </select>
+                </form>
+            </div>
+            <h5>Description:</h5>
+            <p class="description">{{description}}</p>
+            <app-add-button (click)="addToCart(item.title, s.value, q.value, item.price.toFixed(2), item.image)"></app-add-button>
+        </div>
+    </div>
+</div>
